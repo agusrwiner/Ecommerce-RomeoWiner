@@ -26,7 +26,7 @@ const NavBar = () => {
                         <a className="tab-LI-A" href="">Contacto</a>
                     </li>
                 </ul>
-                <div className="widgetsDIV">
+                <div className="widgets-DIV">
                     <div className="burger">
                         <div className="line line1"></div>
                         <div className="line line2"></div>
