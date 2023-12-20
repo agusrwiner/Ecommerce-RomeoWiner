@@ -1,15 +1,41 @@
 import CartWidget from "../CartWidget/CartWidget";
+import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <nav>
-            <h3>Ecommerce</h3>
-            <div>
-                <button>Celulares</button>
-                <button>Tablets</button>
-                <button>Notebooks</button>
+        <nav className="navbar">
+            <div className="growLimit growLimitNavbar">
+                <div className="logoDIV">
+                    <h3 className="storeTitle">TuMate</h3>
+                </div>
+                <ul className="tabs">
+                    <li className="tab-LI">
+                        <a className="tab-LI-A" href="">Inicio</a>
+                    </li>
+                    <li className="tab-LI">
+                        <a className="tab-LI-A" href="">Mates</a>
+                    </li>
+                    <li className="tab-LI">
+                        <a className="tab-LI-A" href="">Termos</a>
+                    </li>
+                    <li className="tab-LI">
+                        <a className="tab-LI-A" href="">Bombillas</a>
+                    </li>
+                    <li className="tab-LI">
+                        <a className="tab-LI-A" href="">Contacto</a>
+                    </li>
+                </ul>
+                <div className="widgetsDIV">
+                    <div className="burger">
+                        <div className="line line1"></div>
+                        <div className="line line2"></div>
+                        <div className="line line3"></div>
+                    </div>
+                    <CartWidget />
+                </div>
             </div>
-            <CartWidget />
+
+            <div class="exitModal"></div>
         </nav>
     )
 }
