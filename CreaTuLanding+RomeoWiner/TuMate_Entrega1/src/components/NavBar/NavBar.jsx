@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
+import './NavBar.js'
 
 const NavBar = () => {
     return (
@@ -35,7 +36,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div class="exitModal"></div>
+            <div className="exitModal"></div>
         </nav>
     )
 }

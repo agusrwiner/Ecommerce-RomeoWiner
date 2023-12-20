@@ -70,7 +70,7 @@
     background: rgba(242, 242, 242, 0.502);
 }
 
-.nav-active {
+.tabs-active {
     transform: scaleX(100%);
     /* backdrop-filter: blur(5px); */
 }
@@ -127,7 +127,6 @@
 .exitModal {
     display: none;
 }
-
 .exitModal-active {
     display: block;
     position: absolute;
