@@ -22,17 +22,14 @@ const NavBar = () => {
                     <li className="tab-LI">
                         <a className="tab-LI-A" href="">Bombillas</a>
                     </li>
-                    <li className="tab-LI">
-                        <a className="tab-LI-A" href="">Contacto</a>
-                    </li>
                 </ul>
                 <div className="widgets-DIV">
+                    <CartWidget />
                     <div className="burger">
                         <div className="line line1"></div>
                         <div className="line line2"></div>
                         <div className="line line3"></div>
                     </div>
-                    <CartWidget />
                 </div>
             </div>
 

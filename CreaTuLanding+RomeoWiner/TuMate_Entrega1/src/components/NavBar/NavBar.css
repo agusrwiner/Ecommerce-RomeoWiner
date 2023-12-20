@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
     --colorNav: #0f0f0f;
     --backgroungNav: #f2f2f280;
@@ -101,6 +106,12 @@
     transition: color .4s, opacity .4s;
 }
 
+.widgets-DIV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .burger {
     display: block;
     cursor: pointer;
@@ -147,7 +158,7 @@
         flex-direction: row;
 
         min-height: 0;
-        width: 68%;
+        width: 50%;
 
         transform: scaleX(1);
         background-color: rgba(245, 222, 179, 0);
@@ -167,7 +178,6 @@
         opacity: 0;
         transform: translate(80px, -15px) rotate(-5deg);
     }
-
     100% {
         opacity: 1;
         transform: translate(0) rotate(0);
