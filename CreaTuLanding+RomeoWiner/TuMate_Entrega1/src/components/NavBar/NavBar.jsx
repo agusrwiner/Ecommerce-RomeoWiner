@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
+import logo from './Assets/02mateLogo.png'
 // import './NavBar.js'
 
 const NavBar = () => {
@@ -7,7 +8,8 @@ const NavBar = () => {
         <nav className="navbar">
             <div className="growLimit growLimitNavbar">
                 <div className="logoDIV">
-                    <h3 className="storeTitle">TuMate</h3>
+                    {/* <h3 className="storeTitle">TuMate</h3> */}
+                    <img className="storeLogo" src={logo} alt="Logo" />
                 </div>
                 <ul className="tabs">
                     <li className="tab-LI">

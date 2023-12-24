@@ -49,10 +49,12 @@
 }
 
 .logoDIV {
-    color: var(--colorNav);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storeLogo{
+    height: 72px;
 }
 
 .tabs {
