@@ -55,6 +55,8 @@
 }
 .storeLogo{
     height: 72px;
+
+    user-select: none;
 }
 
 .tabs {
@@ -99,6 +101,7 @@
     z-index: 3200;
 
     color: var(--colorNav);
+    user-select: none;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
