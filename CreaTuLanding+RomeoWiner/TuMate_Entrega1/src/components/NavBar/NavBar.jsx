@@ -1,6 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
-import logo from './Assets/02mateLogo.png'
+import logo from './../../assets/02mateLogo.png'
 // import './NavBar.js'
 
 const NavBar = () => {
