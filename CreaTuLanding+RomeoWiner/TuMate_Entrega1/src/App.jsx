@@ -8,7 +8,7 @@ function App() {
     <div className='appDiv'>
       <NavBar/>
       <ItemListContainer message={'Hola, en un futuro aqui se veran los productos'} />
-      <ItemCount initial={1} stock={10} onAdd={ (quantity) => console.log('Cantidad agregada: ', quantity) } />
+      {/* <ItemCount initial={1} stock={10} onAdd={ (quantity) => console.log('Cantidad agregada: ', quantity) } /> */}
     </div>
   )
 }
