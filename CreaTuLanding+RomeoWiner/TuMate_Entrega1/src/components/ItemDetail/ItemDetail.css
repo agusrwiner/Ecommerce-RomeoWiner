@@ -33,11 +33,11 @@
     width: 100%;
     border-radius: 8px;
 
-    background-color: #ffcaa6;
+    /* background-color: #ffcaa6; */
 }
 
 .cardImg {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 }
 

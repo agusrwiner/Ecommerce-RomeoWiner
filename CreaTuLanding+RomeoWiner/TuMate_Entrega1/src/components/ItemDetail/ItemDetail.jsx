@@ -1,11 +1,11 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ( {id, name, img, category, description, price, stock} ) => {
+const ItemDetail = ({ id, title, price, category, description, image }) => {
     return (
         <article className='card detail'>
             <header className='cardHeader'>
-                <h2 className='cardH2'>{name}</h2>
+                <h2 className='cardH2'>{title}</h2>
                 <p className='info'>{id}</p>
                 <p className='info'>${price}</p>
                 <p className='info'>{category}</p>
@@ -13,7 +13,7 @@ const ItemDetail = ( {id, name, img, category, description, price, stock} ) => {
                 <p className='info'>{stock}</p>
             </header>
             <picture className='cardPicture'>
-                <img className='cardImg' src={img} alt={name} />
+                <img className='cardImg' src={image} alt={title} />
             </picture>
             <footer className='cardFooter'>
                 <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log(`Cantidad agregada: ${quantity}` ) } />
