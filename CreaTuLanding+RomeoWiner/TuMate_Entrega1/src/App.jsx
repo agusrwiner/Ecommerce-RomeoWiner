@@ -8,7 +8,7 @@ function App() {
     <div className='appDiv'>
       <NavBar/>
       <ItemListContainer message={'Hola, en un futuro aqui se veran los productos'} />
-      <ItemDetailContainer/>
+      {/* <ItemDetailContainer/> */}
     </div>
   )
 }
