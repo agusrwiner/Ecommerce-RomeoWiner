@@ -1,6 +1,6 @@
 import './ItemDetailContainer.css'
 import { useState, useEffect } from 'react'
-import { getProductById } from '../../asyncMock';
+import { getProductById } from '../../util/asyncMock';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = ()=> {
