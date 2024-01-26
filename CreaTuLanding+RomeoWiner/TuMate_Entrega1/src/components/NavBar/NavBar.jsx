@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
+import { NavLink } from "react-router-dom";
 import logo from './../../assets/02mateLogo.png'
 // import './NavBar.js'
 
@@ -8,21 +9,20 @@ const NavBar = () => {
         <nav className="navbar">
             <div className="growLimit growLimitNavbar">
                 <div className="logoDIV">
-                    {/* <h3 className="storeTitle">TuMate</h3> */}
-                    <img className="storeLogo" src={logo} alt="Logo" />
+                    <NavLink to='/'><img className="storeLogo" src={logo} alt="Logo" /></NavLink>
                 </div>
                 <ul className="tabs">
                     <li className="tab-LI">
-                        <a className="tab-LI-A" href="">Inicio</a>
+                        <NavLink to='/productos' className="tab-LI-A" href="">Inicio</NavLink>
                     </li>
                     <li className="tab-LI">
-                        <a className="tab-LI-A" href="">Mates</a>
+                        <NavLink to='/productos/mates' className="tab-LI-A" href="">Mates</NavLink>
                     </li>
                     <li className="tab-LI">
-                        <a className="tab-LI-A" href="">Termos</a>
+                        <NavLink to='/productos/termos' className="tab-LI-A" href="">Termos</NavLink>
                     </li>
                     <li className="tab-LI">
-                        <a className="tab-LI-A" href="">Bombillas</a>
+                        <NavLink to='/productos/bombillas' className="tab-LI-A" href="">Bombillas</NavLink>
                     </li>
                 </ul>
                 <div className="widgets-DIV">

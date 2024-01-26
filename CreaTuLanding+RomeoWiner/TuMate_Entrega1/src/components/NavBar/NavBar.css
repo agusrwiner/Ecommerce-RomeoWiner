@@ -110,6 +110,11 @@
 
     transition: color .3s, opacity .3s;
 }
+.tab-LI-A.active{
+    font-size: 20px;
+    text-decoration: underline;
+    color: #f2f2f2;
+}
 
 .widgets-DIV{
     display: flex;

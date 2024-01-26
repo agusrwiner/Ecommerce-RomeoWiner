@@ -1,4 +1,4 @@
-.detail{
+/* .detail{
     width: 400px;
     height: auto;
     min-height: 600px;
@@ -33,11 +33,9 @@
     width: 100%;
     border-radius: 8px;
 
-    /* background-color: #ffcaa6; */
 }
 
 .cardImg {
-    /* width: 100%; */
     height: 100%;
 }
 
@@ -50,4 +48,4 @@
     justify-content: center;
 
     width: 100%;
-}
+} */
