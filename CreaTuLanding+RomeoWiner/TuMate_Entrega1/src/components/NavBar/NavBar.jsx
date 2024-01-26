@@ -13,16 +13,16 @@ const NavBar = () => {
                 </div>
                 <ul className="tabs">
                     <li className="tab-LI">
-                        <NavLink to='/productos' className="tab-LI-A" href="">Inicio</NavLink>
+                        <NavLink to='/products' className="tab-LI-A" href="">Inicio</NavLink>
                     </li>
                     <li className="tab-LI">
-                        <NavLink to='/productos/mates' className="tab-LI-A" href="">Mates</NavLink>
+                        <NavLink to='/products/electronics' className="tab-LI-A" href="">Mates</NavLink>
                     </li>
                     <li className="tab-LI">
-                        <NavLink to='/productos/termos' className="tab-LI-A" href="">Termos</NavLink>
+                        <NavLink to='/products/jewelery' className="tab-LI-A" href="">Termos</NavLink>
                     </li>
                     <li className="tab-LI">
-                        <NavLink to='/productos/bombillas' className="tab-LI-A" href="">Bombillas</NavLink>
+                        <NavLink to="/products/men's clothing" className="tab-LI-A" href="">Bombillas</NavLink>
                     </li>
                 </ul>
                 <div className="widgets-DIV">
