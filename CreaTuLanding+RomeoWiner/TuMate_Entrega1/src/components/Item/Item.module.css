@@ -39,8 +39,11 @@
 
 .cardH2{
     line-height: 1.5;
+    font-size: 18px;
 }
-
+.cardPrice{
+    font-size: 14px;
+}
 .cardFooter{
     display: flex;
     justify-content: center;

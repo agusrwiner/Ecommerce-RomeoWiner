@@ -1,12 +1,21 @@
 .ItemDetailContainer{
     position: absolute;
-    inset: 0;
-    margin: auto;
+    top: 80px;
+    left: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(80, 59, 59, 0.35);
-    backdrop-filter: blur(5px);
+    width: 100vw;
+    max-width: 100%;
+    height: calc(100vh - 80px);
+    overflow: auto;
+    padding: 15px;
+}
+
+@media screen and (max-width: 475px) {
+    .ItemDetailContainer {
+        padding: 15px 0 15px 0;
+    }
 }

@@ -1,16 +1,13 @@
-/* .detail{
-    width: 400px;
-    height: auto;
-    min-height: 600px;
-}
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
 
-    width: 190px;
-    height: 254px;
+    width: 90%;
+    max-width: 800px;
+    min-height: 75%;
     padding: 12.8px;
     border-radius: 8px;
 
@@ -27,7 +24,9 @@
 }
 
 .cardPicture {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     height: 40%;
     width: 100%;
@@ -36,11 +35,17 @@
 }
 
 .cardImg {
-    height: 100%;
+    width: 14%;
+    max-width: 190px;
+    min-width: 90px;
+    /* height: 100%; */
+    max-height: 275px;
+
 }
 
 .cardH2 {
     line-height: 1.5;
+    font-size: 20px;
 }
 
 .cardFooter {
@@ -48,4 +53,4 @@
     justify-content: center;
 
     width: 100%;
-} */
+}
