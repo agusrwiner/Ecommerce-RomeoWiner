@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import './Item.css'
 
 const Item = ({id, title, price, category, description, image}) => {
@@ -11,7 +12,7 @@ const Item = ({id, title, price, category, description, image}) => {
                 <img className='cardImg' src={image} alt={title}/>
             </picture>
             <footer className='cardFooter'>
-                <button className='card-seeDetail'>Ver Detalle</button>
+                <NavLink to={`/product/${id}`} className='card-seeDetail'>Ver Mas</NavLink>
             </footer>
         </article>
     )
