@@ -103,12 +103,17 @@
     color: var(--colorNav);
     user-select: none;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 3px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 
     transition: color .3s, opacity .3s;
+}
+.tab-LI-A.active{
+    font-size: 20px;
+    text-decoration: underline;
+    color: #f2f2f2;
 }
 
 .widgets-DIV{

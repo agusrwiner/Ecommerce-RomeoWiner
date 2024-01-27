@@ -1,0 +1,21 @@
+.ItemDetailContainer{
+    position: absolute;
+    top: 80px;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    max-width: 100%;
+    height: calc(100vh - 80px);
+    overflow: auto;
+    padding: 15px;
+}
+
+@media screen and (max-width: 475px) {
+    .ItemDetailContainer {
+        padding: 15px 0 15px 0;
+    }
+}
