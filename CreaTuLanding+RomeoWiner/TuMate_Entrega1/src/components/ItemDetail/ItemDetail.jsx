@@ -15,7 +15,7 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
                 <img className={`${css.cardImg}`} src={image} alt={title} />
             </picture>
             <footer className='cardFooter'>
-                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log(`Cantidad agregada: ${quantity}` ) } />
+                <ItemCount initial={1} stock={stock} onAdd={ (quantity) => console.log(`Agregaste: ${quantity} ${title} al carrito` ) } />
             </footer>
         </article>
     )
