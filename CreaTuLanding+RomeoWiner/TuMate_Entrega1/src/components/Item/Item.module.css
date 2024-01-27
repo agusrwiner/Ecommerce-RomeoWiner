@@ -16,12 +16,16 @@
 }
 
 .cardHeader{
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .cardPicture {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,15 +37,34 @@
     /* background-color: #ffcaa6; */
 }
 .cardImg{
+    position: relative;
+
     /* width: 100%; */
     height: 100%;
 }
 
 .cardH2{
+    position: relative;
+    z-index: 100;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
     line-height: 1.5;
     font-size: 18px;
 }
+.cardH2:hover{
+    position: relative;
+
+    overflow: visible;
+    text-overflow: unset;
+    white-space: wrap;
+}
+
 .cardPrice{
+    position: relative;
+
     font-size: 14px;
 }
 .cardFooter{
