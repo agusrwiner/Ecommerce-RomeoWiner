@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
 import { getProductById, getProducts } from "../../util/asyncMock";
 import ItemList from '../ItemList/ItemList';
+import Spinner from '../Spinner/Spinner';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
+    const [loading, setloading] = useState(true);
     const { categoryId } = useParams();
-    console.log(categoryId);
+    // console.log(categoryId);
 
     useEffect(() => {
         getProducts().then( (products) => {
@@ -16,8 +18,10 @@ const ItemListContainer = () => {
                     (product) => product.category === categoryId
                 )
                 setProducts(filteredProducts)
+                setloading(false);
             }else{
-                setProducts(products)
+                setProducts(products);
+                setloading(false);
             }
         })
     }, [categoryId])
@@ -27,7 +31,11 @@ const ItemListContainer = () => {
         // console.log(product);
     } )
 
-    return (
+    return loading ? (
+        <div className='itemListContainer'>
+            <Spinner/>
+        </div>
+    ) : (
         <div className='itemListContainer'>
             <ItemList products={products} />
         </div>
