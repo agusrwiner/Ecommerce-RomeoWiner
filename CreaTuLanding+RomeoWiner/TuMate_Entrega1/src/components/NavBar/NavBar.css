@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root {
-    --colorNav: #0f0f0f;
-    --backgroungNav: #f2f2f280;
-}
 
 .growLimit {
     position: relative;
@@ -44,7 +40,7 @@
     max-width: 100%;
     margin: auto;
 
-    background-color: var(--backgroungNav);
+    background-color: rgba(242, 242, 242, .5);
     /* backdrop-filter: blur(5px); */
 }
 
@@ -76,7 +72,7 @@
     transition: transform 600ms ease-out;
     transform-origin: right;
     transform: scaleX(0);
-    background: rgba(242, 242, 242, 0.502);
+    background-color: rgba(242, 242, 242, 0.5);
 }
 
 .tabs-active {
@@ -100,7 +96,7 @@
     position: relative;
     z-index: 3200;
 
-    color: var(--colorNav);
+    color: #0f0f0f;
     user-select: none;
     text-decoration: none;
     text-transform: capitalize;
@@ -132,7 +128,7 @@
     height: 3px;
     margin: 5px;
 
-    background: var(--colorNav);
+    background-color: #0f0f0f;
     transition: transform 500ms ease, opacity 500ms ease;
 }
 .burger-active .line1 {
@@ -155,12 +151,13 @@
     top: 0;
     left: 0;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     width: 100vw;
     height: 100vh;
 }
 
 @media screen and (min-width: 700px) {
+    *{outline: solid 1px red;}
     .tabs {
         position: relative;
         inset: 0;
