@@ -40,7 +40,7 @@
     max-width: 100%;
     margin: auto;
 
-    background-color: rgba(242, 242, 242, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     /* backdrop-filter: blur(5px); */
 }
 
@@ -72,7 +72,7 @@
     transition: transform 600ms ease-out;
     transform-origin: right;
     transform: scaleX(0);
-    background-color: rgba(242, 242, 242, 0.5);
+    /* background-color: rgba(242, 242, 242, 0.5); */
 }
 
 .tabs-active {
@@ -157,7 +157,7 @@
 }
 
 @media screen and (min-width: 700px) {
-    *{outline: solid 1px red;}
+    /* *{outline: solid 1px red;} */
     .tabs {
         position: relative;
         inset: 0;
@@ -168,7 +168,7 @@
         width: 50%;
 
         transform: scaleX(1);
-        background-color: rgba(245, 222, 179, 0);
+        /* background-color: rgba(245, 222, 179, 0); */
     }
 
     .tab-LI {
