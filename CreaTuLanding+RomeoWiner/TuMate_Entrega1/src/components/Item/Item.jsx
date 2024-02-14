@@ -5,7 +5,9 @@ const Item = ({id, title, price, category, description, image}) => {
     return(
         <article className={`${css.card}`}>
             <header className={`${css.cardHeader}`}>
-                <h2 className={`${css.cardH2}`}>{title}</h2>
+                <div className={`${css.titleHolder}`}>
+                    <h2 className={`${css.cardH2}`}>{title}</h2>
+                </div>
                 <p className={`${css.cardPrice}`}>${price}</p>
             </header>
             <picture className={`${css.cardPicture}`}>
