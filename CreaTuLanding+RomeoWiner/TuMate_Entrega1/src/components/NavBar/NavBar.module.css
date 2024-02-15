@@ -1,9 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .growLimit {
     position: relative;
 
@@ -41,7 +35,7 @@
     margin: auto;
 
     background-color: rgba(0, 0, 0, 0.5);
-    /* backdrop-filter: blur(5px); */
+    backdrop-filter: blur(5px);
 }
 
 .logoDIV {
@@ -80,7 +74,7 @@
     /* backdrop-filter: blur(5px); */
 }
 
-.tab-LI {
+.tabLI {
     position: relative;
     z-index: 2000;
 
@@ -88,15 +82,15 @@
     opacity: 0;
 }
 
-.tab-LI-A:hover {
+.tabLIA:hover {
     opacity: .5;
 }
 
-.tab-LI-A {
+.tabLIA {
     position: relative;
     z-index: 3200;
 
-    color: #0f0f0f;
+    color: #f2f2f2;
     user-select: none;
     text-decoration: none;
     text-transform: capitalize;
@@ -106,13 +100,13 @@
 
     transition: color .3s, opacity .3s;
 }
-.tab-LI-A.active{
+.tabLIA.active{
     font-size: 20px;
     text-decoration: underline;
     color: #f2f2f2;
 }
 
-.widgets-DIV{
+.widgetsDIV{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,7 +165,7 @@
         /* background-color: rgba(245, 222, 179, 0); */
     }
 
-    .tab-LI {
+    .tabLI {
         opacity: 1;
     }
 

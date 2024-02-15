@@ -1,41 +1,41 @@
 import CartWidget from "../CartWidget/CartWidget";
-import './NavBar.css'
+import css from './NavBar.module.css'
 import { NavLink } from "react-router-dom";
 import logo from './../../assets/02mateLogo.png'
 // import './NavBar.js'
 
 const NavBar = () => {
     return (
-        <nav className="navbar">
-            <div className="growLimit growLimitNavbar">
-                <div className="logoDIV">
-                    <NavLink to='/'><img className="storeLogo" src={logo} alt="Logo" /></NavLink>
+        <nav className={`${css.navbar}`}>
+            <div className={`${css.growLimit} ${css.growLimitNavbar}`}>
+                <div className={`${css.logoDIV}`}>
+                    <NavLink to='/'><img className={`${css.storeLogo}`} src={logo} alt="Logo" /></NavLink>
                 </div>
-                <ul className="tabs">
-                    <li className="tab-LI">
-                        <NavLink to='/products' className="tab-LI-A" href="">Inicio</NavLink>
+                <ul className={`${css.tabs}`}>
+                    <li className={`${css.tabLI}`}>
+                        <NavLink to='/products' className={`${css.tabLIA}`} href="">Inicio</NavLink>
                     </li>
-                    <li className="tab-LI">
-                        <NavLink to='/products/electronics' className="tab-LI-A" href="">Mates</NavLink>
+                    <li className={`${css.tabLI}`}>
+                        <NavLink to='/products/electronics' className={`${css.tabLIA}`} href="">Mates</NavLink>
                     </li>
-                    <li className="tab-LI">
-                        <NavLink to='/products/jewelery' className="tab-LI-A" href="">Termos</NavLink>
+                    <li className={`${css.tabLI}`}>
+                        <NavLink to='/products/jewelery' className={`${css.tabLIA}`} href="">Termos</NavLink>
                     </li>
-                    <li className="tab-LI">
-                        <NavLink to="/products/men's clothing" className="tab-LI-A" href="">Bombillas</NavLink>
+                    <li className={`${css.tabLI}`}>
+                        <NavLink to="/products/men's clothing" className={`${css.tabLIA}`} href="">Bombillas</NavLink>
                     </li>
                 </ul>
-                <div className="widgets-DIV">
+                <div className={`${css.widgetsDIV}`}>
                     <CartWidget />
-                    <div className="burger">
-                        <div className="line line1"></div>
-                        <div className="line line2"></div>
-                        <div className="line line3"></div>
+                    <div className={`${css.burger}`}>
+                        <div className={`${css.line} ${css.line1}`}></div>
+                        <div className={`${css.line} ${css.line2}`}></div>
+                        <div className={`${css.line} ${css.line3}`}></div>
                     </div>
                 </div>
             </div>
 
-            <div className="exitModal"></div>
+            <div className={`${css.exitModal}`}></div>
         </nav>
     )
 }
