@@ -9,6 +9,9 @@
 
     /* background-color: lightblue; */
 }
+.button{
+    color: #f2f2f2;
+}
 .controls{
     display: flex;
     justify-content: space-between;

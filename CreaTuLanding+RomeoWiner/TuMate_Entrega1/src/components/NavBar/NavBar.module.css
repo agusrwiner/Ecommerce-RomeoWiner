@@ -34,7 +34,7 @@
     max-width: 100%;
     margin: auto;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(33, 34, 34, 0.75);
     backdrop-filter: blur(5px);
 }
 
@@ -103,7 +103,6 @@
 .tabLIA.active{
     font-size: 20px;
     text-decoration: underline;
-    color: #f2f2f2;
 }
 
 .widgetsDIV{
