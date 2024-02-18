@@ -9,7 +9,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
-          <Route path='/products' element={<ItemListContainer />} />
+          <Route path='/home' element={<ItemListContainer />} />
           <Route path='/products/:categoryId' element={<ItemListContainer />} />
           <Route path='/product/:productId' element={<ItemDetailContainer />} />
           <Route path='*' element={<h1>404 NOT FOUND</h1>} />

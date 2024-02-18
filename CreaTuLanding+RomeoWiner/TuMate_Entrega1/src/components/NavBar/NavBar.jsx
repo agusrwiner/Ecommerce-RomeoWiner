@@ -9,11 +9,11 @@ const NavBar = () => {
         <nav className={`${css.navbar}`}>
             <div className={`${css.growLimit} ${css.growLimitNavbar}`}>
                 <div className={`${css.logoDIV}`}>
-                    <NavLink to='/'><img className={`${css.storeLogo}`} src={logo} alt="Logo" /></NavLink>
+                    <NavLink to='/home'><img className={`${css.storeLogo}`} src={logo} alt="Logo" /></NavLink>
                 </div>
                 <ul className={`${css.tabs}`}>
                     <li className={`${css.tabLI}`}>
-                        <NavLink to='/products' className={`${css.tabLIA}`} href="">Inicio</NavLink>
+                        <NavLink to='/home' className={`${css.tabLIA}`} href="">Inicio</NavLink>
                     </li>
                     <li className={`${css.tabLI}`}>
                         <NavLink to='/products/electronics' className={`${css.tabLIA}`} href="">Mates</NavLink>
