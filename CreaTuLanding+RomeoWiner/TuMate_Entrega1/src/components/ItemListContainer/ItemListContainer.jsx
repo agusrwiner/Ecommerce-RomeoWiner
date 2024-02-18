@@ -32,9 +32,7 @@ const ItemListContainer = () => {
     } )
 
     return loading ? (
-        <div className='itemListContainer'>
-            <Spinner/>
-        </div>
+        <Spinner/>
     ) : (
         <div className='itemListContainer'>
             <ItemList products={products} />
