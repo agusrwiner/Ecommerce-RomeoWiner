@@ -21,9 +21,7 @@ const ItemDetailContainer = ()=> {
     }, [productId])
 
     return loading ? (
-        <div className='ItemDetailContainer'>
-            <Spinner/>
-        </div>
+        <Spinner />
     ) : (
         <div className='ItemDetailContainer'>
             <ItemDetail {...product} />
