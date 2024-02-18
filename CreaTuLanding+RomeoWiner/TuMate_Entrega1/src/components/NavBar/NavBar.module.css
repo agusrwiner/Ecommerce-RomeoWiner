@@ -121,7 +121,7 @@
     height: 3px;
     margin: 5px;
 
-    background-color: #0f0f0f;
+    background-color: #f2f2f2;
     transition: transform 500ms ease, opacity 500ms ease;
 }
 .burger-active .line1 {
