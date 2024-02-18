@@ -5,7 +5,7 @@
     justify-content: space-between;
     flex-grow: 1;
 
-    width: 254px;
+    /* width: 254px; */
     height: 254px;
     padding: 12.8px;
     border-radius: 8px;
@@ -83,7 +83,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 604px) {
     .card{
         min-height: 414px;
     }
