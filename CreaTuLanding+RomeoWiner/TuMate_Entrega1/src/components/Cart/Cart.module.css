@@ -1,0 +1,8 @@
+.cart{
+    position: relative;
+    background-color: red;
+    inset: 0;
+    top: 40vh;
+    margin: auto;
+    font-size: 20px;
+}

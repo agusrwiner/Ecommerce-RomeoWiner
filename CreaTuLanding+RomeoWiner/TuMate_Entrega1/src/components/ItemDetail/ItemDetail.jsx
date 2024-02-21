@@ -9,7 +9,7 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
             <header className={`${css.cardHeader}`}>
                 <h2 className={`${css.cardH2}`}>{title}</h2>
                 <p className={`${css.cardDesc}`}>{description}</p>
-                <p className={`${css.info}`}>${price}</p>
+                <p className={`${css.price}`}>${price}</p>
             </header>
             <picture className={`${css.cardPicture}`}>
                 <img className={`${css.cardImg}`} src={image} alt={title} />

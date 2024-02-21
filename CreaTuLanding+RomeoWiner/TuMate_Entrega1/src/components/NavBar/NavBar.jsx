@@ -26,7 +26,7 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <div className={`${css.widgetsDIV}`}>
-                    <CartWidget />
+                    <NavLink to={"cart"}> <CartWidget/> </NavLink>
                     <div className={`${css.burger}`}>
                         <div className={`${css.line} ${css.line1}`}></div>
                         <div className={`${css.line} ${css.line2}`}></div>
