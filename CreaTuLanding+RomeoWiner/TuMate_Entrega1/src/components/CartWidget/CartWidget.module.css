@@ -1,7 +1,10 @@
-.cartDIV{
+.container{
     user-select: none;
 }
-p{
+.svg{
+    padding: 0;
+}
+.totalItems{
     display: inline-block;
     
     color: #f2f2f2;

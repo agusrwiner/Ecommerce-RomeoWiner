@@ -1,8 +1,16 @@
 import css from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount';
+import { useCartContext } from '../../routing/context/cartContext';
 
 const ItemDetail = ({ id, title, price, category, description, image, stock }) => {
     stock = 10
+    const item = { id, title, price, category, description, image, stock }
+    const {addItem} = useCartContext()
+
+    const onAdd = count => {
+        console.log(`Agregaste: ${count} ${title} al carrito`)
+        addItem(item,count)
+    }
 
     return (
         <article className={`${css.card}`}>
@@ -15,7 +23,7 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
                 <img className={`${css.cardImg}`} src={image} alt={title} />
             </picture>
             <footer className={`${css.cardFooter}`}>
-                <ItemCount initial={1} stock={stock} onAdd={ (quantity) => console.log(`Agregaste: ${quantity} ${title} al carrito` ) } />
+                <ItemCount initial={1} stock={stock} onAdd={ onAdd } />
             </footer>
         </article>
     )
