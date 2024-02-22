@@ -24,7 +24,7 @@ const Cart = () => {
                     )}
             </div>
             <div>Cantidad de items: {itemsTotal}</div>
-            <div>Total: {total}</div>
+            <div>Subtotal: {total}</div>
         </div>
     )
 }
