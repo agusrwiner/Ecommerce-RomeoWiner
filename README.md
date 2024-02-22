@@ -22,6 +22,7 @@ Eccomerce de una tienda de mates que utiliza...
 - Google Drive
 - [Fakestore API](https://fakestoreapi.com/docs)
 - [Mockaroo](https://www.mockaroo.com/)
+- Excel
 
 
 
