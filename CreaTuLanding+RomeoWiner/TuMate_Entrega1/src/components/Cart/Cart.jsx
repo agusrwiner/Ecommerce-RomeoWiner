@@ -15,9 +15,9 @@ const Cart = () => {
     ) : (
         <div className={`${css.cartListContainer}`}>
             <div className={`${css.cartItemList}`}>
-                    {cart.map(
-                        cartItems => 
-                        <CartItem key={cartItems.item.id}  
+                    {cart.map( cartItems => 
+                        <CartItem 
+                            key={cartItems.item.id}  
                             item={cartItems.item} 
                             quantity={cartItems.quantity} 
                         />
