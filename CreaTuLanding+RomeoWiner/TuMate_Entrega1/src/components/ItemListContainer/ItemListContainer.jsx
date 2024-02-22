@@ -42,26 +42,12 @@ const ItemListContainer = () => {
                 setloading(false);
             })
         }
-        
-        // getProducts().then( (products) => {
-        //     if (categoryId) {
-        //         const filteredProducts = products.filter(
-        //             (product) => product.category === categoryId
-        //         )
-        //         setProducts(filteredProducts)
-        //         setloading(false);
-        //     }else{
-        //         setProducts(products);
-        //         setloading(false);
-        //     }
-        // })
     }, [categoryId])
 
     return loading ? (
         <Spinner/>
     ) : (
         <div className='itemListContainer'>
-            <button onClick={importProdcuts}>IMPORT DATA</button>
             <ItemList products={products} />
         </div>
     )
