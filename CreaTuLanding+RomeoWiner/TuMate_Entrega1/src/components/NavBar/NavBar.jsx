@@ -16,13 +16,13 @@ const NavBar = () => {
                         <NavLink to='/home' className={`${css.tabLIA}`} href="">Inicio</NavLink>
                     </li>
                     <li className={`${css.tabLI}`}>
-                        <NavLink to='/products/electronics' className={`${css.tabLIA}`} href="">Mates</NavLink>
+                        <NavLink to='/products/mate' className={`${css.tabLIA}`} href="">Mates</NavLink>
                     </li>
                     <li className={`${css.tabLI}`}>
-                        <NavLink to='/products/jewelery' className={`${css.tabLIA}`} href="">Termos</NavLink>
+                        <NavLink to='/products/termo' className={`${css.tabLIA}`} href="">Termos</NavLink>
                     </li>
                     <li className={`${css.tabLI}`}>
-                        <NavLink to="/products/men's clothing" className={`${css.tabLIA}`} href="">Bombillas</NavLink>
+                        <NavLink to="/products/bombilla" className={`${css.tabLIA}`} href="">Bombillas</NavLink>
                     </li>
                 </ul>
                 <div className={`${css.widgetsDIV}`}>
