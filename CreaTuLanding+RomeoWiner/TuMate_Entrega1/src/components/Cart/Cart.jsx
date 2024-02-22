@@ -6,10 +6,7 @@ import { useCartContext } from '../../routing/context/cartContext';
 
 
 const Cart = () => {
-    const [loading, setloading] = useState(false);
     const { cart, total, itemsTotal } = useCartContext()
-
-    console.log(cart);
 
     return itemsTotal === 0 ? (
         <div className={`${css.cartListContainer}`}>
@@ -19,7 +16,11 @@ const Cart = () => {
         <div className={`${css.cartListContainer}`}>
             <div className={`${css.cartItemList}`}>
                     {cart.map(
-                        cartItems => <CartItem key={cartItems.item.id} {...cartItems.item }/>
+                        cartItems => 
+                        <CartItem key={cartItems.item.id}  
+                            item={cartItems.item} 
+                            quantity={cartItems.quantity} 
+                        />
                     )}
             </div>
             <div>Cantidad de items: {itemsTotal}</div>

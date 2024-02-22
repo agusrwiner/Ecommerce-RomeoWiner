@@ -8,7 +8,6 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
     const {addItem} = useCartContext()
 
     const onAdd = count => {
-        console.log(`Agregaste: ${count} ${title} al carrito`)
         addItem(item,count)
     }
 
