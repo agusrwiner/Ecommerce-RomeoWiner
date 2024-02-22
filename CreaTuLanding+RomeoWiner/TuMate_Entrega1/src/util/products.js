@@ -240,3 +240,31 @@ const products = [
         "stock": 50
     }
 ]
+
+import { db } from '../firebase/config'
+import { collection, addDoc } from 'firebase/firestore'
+
+export const importProdcuts = async () => {
+    const productsCollection = collection( db,'products' )
+    
+    products.forEach( product => {
+        console.log(product);
+        addDoc( productsCollection,product ).then( docRef => {
+            console.log(docRef);
+            console.log(docRef.id);
+        } )
+    } )
+    
+    console.log(products);
+}
+
+/*
+{
+    "title": "Mate Imperial Premium Calabaza Costuras Uruguayas Cincelado",
+    "description": "turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor",
+    "category": "mate",
+    "image": "http://dummyimage.com/137x100.png/dddddd/000000",
+    "price": 29843.7,
+    "stock": 47
+}
+*/
