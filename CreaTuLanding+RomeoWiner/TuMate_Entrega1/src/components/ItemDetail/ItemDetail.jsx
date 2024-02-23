@@ -3,7 +3,6 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useCartContext } from '../../routing/context/cartContext';
 
 const ItemDetail = ({ id, title, price, category, description, image, stock }) => {
-    stock = 10
     const item = { id, title, price, category, description, image, stock }
     const {addItem} = useCartContext()
 

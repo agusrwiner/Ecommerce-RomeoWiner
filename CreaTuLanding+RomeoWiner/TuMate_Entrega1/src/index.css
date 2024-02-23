@@ -8,6 +8,21 @@ body{
   background-color: #242424;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+.not_foundDIV{
+  position: relative;
+  top: 80px;
+
+  display: flex;
+  justify-content: center;
+  /* align-items: stretch; */
+
+  width: 100vw;
+  max-width: 100%;
+  padding: 15px;
+}
+.notFound{
+  color: #f2f2f2;
+}
 
 button {
   border-radius: 8px;

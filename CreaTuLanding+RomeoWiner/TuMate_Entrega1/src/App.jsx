@@ -16,7 +16,7 @@ function App() {
           <Route path='/products/:categoryId' element={<ItemListContainer />} />
           <Route path='/product/:productId' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+          <Route path='*' element={<div className="not_foundDIV"><h1 className="notFound">404 NOT FOUND</h1></div>} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

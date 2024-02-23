@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
-import { getProductById, getProducts } from "../../util/asyncMock";
 import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
 import { db } from "../../firebase/config";
 import { collection, getDocs, query, where } from "firebase/firestore";
-
-import { importProdcuts } from "../../util/products";
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
