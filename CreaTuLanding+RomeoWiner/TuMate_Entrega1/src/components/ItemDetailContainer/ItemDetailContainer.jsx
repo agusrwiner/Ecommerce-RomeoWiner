@@ -18,8 +18,7 @@ const ItemDetailContainer = ()=> {
         getDoc(docRef)
             .then((docSnap) => {
                 if (docSnap.exists()) {
-                    console.log('docSnap.data()',docSnap.data());
-                    setProduct( docSnap.data() );
+                    setProduct( { id: docSnap.id, ...docSnap.data() } );
                 } else {
                     console.log("No existe el documento con ese ID!");
                 }
