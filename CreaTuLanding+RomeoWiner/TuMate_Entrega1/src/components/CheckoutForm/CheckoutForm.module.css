@@ -1,4 +1,4 @@
-.cartListContainer{
+.checkOutContainer {
     position: relative;
     top: 80px;
 
@@ -10,7 +10,8 @@
     max-width: 100%;
     padding: 15px;
 }
-.growLimit{
+
+.growLimit {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -20,17 +21,7 @@
     max-width: 1128px;
 }
 
-.cartItemList {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    width: 70%;
-
-    /* background-color: red; */
-}
-
-.priceboxContainer{
+.priceboxContainer {
     position: sticky;
     top: 95px;
 
@@ -46,16 +37,19 @@
     background-color: #f2f2f2;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
 }
-.detailsContainer{
+
+.detailsContainer {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.productsAmountContainer{
+
+.productsAmountContainer {
     display: flex;
     justify-content: space-between;
 }
-.continuarCompraBTN{
+
+.comprarBTN {
     width: 100%;
 
     border-radius: 8px;
@@ -69,6 +63,7 @@
     cursor: pointer;
     transition: border-color 0.25s;
 }
-.continuarCompraBTN:hover {
+
+.comprarBTN:hover {
     border-color: #646cff;
 }

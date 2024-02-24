@@ -1,29 +1,23 @@
-import css from './Cart.module.css'
-import CartItem from '../CartItem/CartItem'
+import css from './CheckoutForm.module.css'
 import { useCartContext } from '../../routing/context/cartContext';
 import { NavLink } from 'react-router-dom';
 
-
-const Cart = () => {
+const CheckoutForm = () => {
     const { cart, total, itemsTotal, clearCart } = useCartContext()
 
     return itemsTotal === 0 ? (
-        <div className={`${css.cartListContainer}`}>
+        <div className={`${css.checkOutContainer}`}>
             <h1>Carrito vacio</h1>
         </div>
     ) : (
-        <div className={`${css.cartListContainer}`}>
-            <button onClick={clearCart}>Vaciar carrito</button>
+        <div className={`${css.checkOutContainer}`}>
             <div className={`${css.growLimit}`}>
-                <div className={`${css.cartItemList}`}>
-                    {cart.map(cartItems =>
-                        <CartItem
-                            key={cartItems.item.id}
-                            item={cartItems.item}
-                            quantity={cartItems.quantity}
-                        />
-                    )}
-                </div>
+                <form className={`${css.userInfo}`}  action="">
+                    <input type="text" placeholder='Nombre'/>
+                    <input type="text" placeholder='Apellido' />
+                    <input type="text" placeholder='Mail' />
+                    <input type="text" placeholder='Contraseña' />
+                </form>
                 <div className={`${css.priceboxContainer}`}>
                     <div className={`${css.titleContainer}`}>
                         <h3 className={`${css.title}`}>Resumen de compra</h3>
@@ -38,11 +32,11 @@ const Cart = () => {
                             <span>${total}</span>
                         </div>
                     </div>
-                        <NavLink to={'/checkout'}><button className={`${css.continuarCompraBTN}`}>Continuar compra</button></NavLink>
+                    <NavLink to={'/'}><button className={`${css.comprarBTN}`}>Comprar</button></NavLink>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Cart
+export default CheckoutForm
