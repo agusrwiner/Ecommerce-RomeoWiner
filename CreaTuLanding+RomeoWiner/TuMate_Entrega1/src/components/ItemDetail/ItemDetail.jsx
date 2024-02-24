@@ -10,7 +10,6 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
 
     const onAdd = count => {
         addItem(item,count)
-        navigate("/cart");
     }
 
     return (
@@ -25,9 +24,14 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
             </picture>
             <footer className={`${css.cardFooter}`}>
                 {isInCart(id) ? (
-                    <NavLink to="/cart">
-                        <button className={`${css.button}`}>Ir al carrito</button>
-                    </NavLink>
+                    <div className={`${css.buttonContainer}`}>
+                        <NavLink to="/">
+                            <button className={`${css.button}`}>Continuar comprando</button>
+                        </NavLink>
+                        <NavLink to="/cart">
+                            <button className={`${css.button}`}>Ir al carrito</button>
+                        </NavLink>
+                    </div>
                 ) : (
                     <ItemCount initial={1} stock={stock} onAdd={onAdd} />
                 )}
