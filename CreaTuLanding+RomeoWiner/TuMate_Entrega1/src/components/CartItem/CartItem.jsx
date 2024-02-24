@@ -4,10 +4,14 @@ import { useCartContext } from '../../routing/context/cartContext';
 
 const CartItem = ( { item: { id, title, price, category, description, image, stock }, quantity } ) => {
     const totalPrice = price * quantity
-    const { deleteItem } = useCartContext()
+    const { updateItem, deleteItem } = useCartContext()
 
     const handleDelete = () => {
         deleteItem(id)
+    }
+    
+    const handleQuantityChange = (newQuantity) => {
+        updateItem(id, newQuantity);
     }
 
     return (
@@ -25,7 +29,7 @@ const CartItem = ( { item: { id, title, price, category, description, image, sto
                 </div>
             </header>
             <div className={`${css.cartItemCountContainer}`}>
-                <CartItemCount initial={quantity} stock={stock} itemId={id}></CartItemCount>
+                <CartItemCount initial={quantity} stock={stock} onQuantityChange={handleQuantityChange}></CartItemCount>
             </div>
             <div className={`${css.itemActions}`}>
                 <button onClick={handleDelete}>Eliminar</button>
