@@ -1,13 +1,16 @@
 import css from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount';
 import { useCartContext } from '../../routing/context/cartContext';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const ItemDetail = ({ id, title, price, category, description, image, stock }) => {
     const item = { id, title, price, category, description, image, stock }
-    const {addItem} = useCartContext()
+    const {addItem, isInCart} = useCartContext()
+    const  navigate = useNavigate();
 
     const onAdd = count => {
         addItem(item,count)
+        navigate("/cart");
     }
 
     return (
@@ -21,7 +24,13 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
                 <img className={`${css.cardImg}`} src={image} alt={title} />
             </picture>
             <footer className={`${css.cardFooter}`}>
-                <ItemCount initial={1} stock={stock} onAdd={ onAdd } />
+                {isInCart(id) ? (
+                    <NavLink to="/cart">
+                        <button className={`${css.button}`}>Ir al carrito</button>
+                    </NavLink>
+                ) : (
+                    <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+                )}
             </footer>
         </article>
     )
