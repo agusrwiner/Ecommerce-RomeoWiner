@@ -1,9 +1,15 @@
 import { NavLink } from 'react-router-dom'
 import css from  './Item.module.css'
 
-const Item = ({id, title, price, category, description, image}) => {
+const Item = ({id, title, price, category, description, image, stock}) => {
     return(
         <article className={`${css.card}`}>
+            {
+                stock <= 0 ? (
+                    <h3>No hay stock</h3>
+                ): <></>
+                
+            }
             <header className={`${css.cardHeader}`}>
                 <div className={`${css.titleHolder}`}>
                     <h2 className={`${css.cardH2}`}>{title}</h2>
