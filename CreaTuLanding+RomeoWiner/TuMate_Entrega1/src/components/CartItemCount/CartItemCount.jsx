@@ -1,17 +1,19 @@
 import css from './CartItemCount.module.css'
 import { useState } from 'react'
 
-const CartItemCount = ({ stock, initial, onAdd }) => {
+const CartItemCount = ({ stock, initial, itemId }) => {
     const [quantity, setQuantity] = useState(initial);
 
     const increment = () => {
         if (quantity < stock) {
             setQuantity(quantity + 1);
+            console.log('itemId', itemId);
         }
     }
     const decrement = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
+            console.log('itemId', itemId);
         }
     }
     const handleChange = (event) => {
@@ -25,6 +27,7 @@ const CartItemCount = ({ stock, initial, onAdd }) => {
             value = stock; // Si el valor ingresado es mayor que el stock, se establece en el stock máximo
         }
 
+        console.log('itemId', itemId);
         setQuantity(value);
     }
 

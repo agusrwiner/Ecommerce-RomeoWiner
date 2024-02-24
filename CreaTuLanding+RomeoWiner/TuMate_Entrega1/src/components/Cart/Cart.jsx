@@ -4,7 +4,7 @@ import { useCartContext } from '../../routing/context/cartContext';
 
 
 const Cart = () => {
-    const { cart, total, itemsTotal } = useCartContext()
+    const { cart, total, itemsTotal, clearCart } = useCartContext()
 
     return itemsTotal === 0 ? (
         <div className={`${css.cartListContainer}`}>
@@ -12,6 +12,7 @@ const Cart = () => {
         </div>
     ) : (
         <div className={`${css.cartListContainer}`}>
+            <button onClick={clearCart}>Vaciar carrito</button>
             <div className={`${css.growLimit}`}>
                 <div className={`${css.cartItemList}`}>
                     {cart.map(cartItems =>

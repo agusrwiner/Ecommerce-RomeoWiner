@@ -1,8 +1,14 @@
 import css from './CartItem.module.css'
 import CartItemCount from '../CartItemCount/CartItemCount'
+import { useCartContext } from '../../routing/context/cartContext';
 
 const CartItem = ( { item: { id, title, price, category, description, image, stock }, quantity } ) => {
     const totalPrice = price * quantity
+    const { deleteItem } = useCartContext()
+
+    const handleDelete = () => {
+        deleteItem(id)
+    }
 
     return (
         <article className={`${css.card}`}>
@@ -19,10 +25,10 @@ const CartItem = ( { item: { id, title, price, category, description, image, sto
                 </div>
             </header>
             <div className={`${css.cartItemCountContainer}`}>
-                <CartItemCount initial={quantity} stock={stock}></CartItemCount>
+                <CartItemCount initial={quantity} stock={stock} itemId={id}></CartItemCount>
             </div>
             <div className={`${css.itemActions}`}>
-                Eliminar
+                <button onClick={handleDelete}>Eliminar</button>
             </div>
         </article>
     )

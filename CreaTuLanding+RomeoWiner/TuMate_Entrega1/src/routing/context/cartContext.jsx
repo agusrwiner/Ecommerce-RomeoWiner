@@ -34,9 +34,33 @@ const CartProvider = ({children}) => {
         }
     }
 
+    const clearCart = () => {
+        setCart( [] )
+        setItemsTotal(0)
+        setTotal(0)
+    }
+
+    const updateItem = (id, quantity) => {
+
+    }
+
+    const deleteItem = (id) => {
+        const updatedCart = cart.filter((cartItem) => cartItem.item.id !== id);
+
+        setCart(updatedCart);
+
+        // Recalcula el total de ítems y el precio total
+        const newItemsTotal = updatedCart.reduce((acc, currentItem) => acc + currentItem.quantity, 0);
+        const newTotal = updatedCart.reduce((acc, currentItem) => acc + currentItem.item.price * currentItem.quantity, 0);
+
+        // Actualiza los estados de itemsTotal y total
+        setItemsTotal(newItemsTotal);
+        setTotal(newTotal);
+    }
+
     const isInCart = id => cart.find( item => item.item.id === id )
 
-    const contextValue = { cart, itemsTotal, total, addItem }
+    const contextValue = { cart, itemsTotal, total, addItem, clearCart, deleteItem }
 
     return <Provider value={contextValue}>{children}</Provider>
 }
