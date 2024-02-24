@@ -5,17 +5,24 @@ const CartItem = ( { item: { id, title, price, category, description, image, sto
 
     return (
         <article className={`${css.card}`}>
-            <header className={`${css.cardHeader}`}>
-                <div className={`${css.titleHolder}`}>
+            <header className={`${css.itemHeader}`}>
+                <picture className={`${css.cardPicture}`}>
+                    <img className={`${css.cardImg}`} src={image} alt={title} />
+                </picture>
+                <div className={`${css.itemCartInfo}`}>
                     <h2 className={`${css.cardH2}`}>{title}</h2>
+                    <div className={`${css.itemPriceContainer}`}>
+                        ${totalPrice}<br/>
+                        ({price} por unidad)
+                    </div>
                 </div>
-                <p className={`${css.cardPrice}`}>Cantidad: {quantity}</p>
-                <p className={`${css.cardPrice}`}>Precio por unidad: ${price}</p>
-                <p className={`${css.cardPrice}`}>Subtotal: ${totalPrice}</p>
             </header>
-            <picture className={`${css.cardPicture}`}>
-                <img className={`${css.cardImg}`} src={image} alt={title} />
-            </picture>
+            <div className={`${css.cartItemCountContainer}`}>
+                ItemCount
+            </div>
+            <div className={`${css.itemActions}`}>
+                Eliminar
+            </div>
         </article>
     )
 }

@@ -1,7 +1,5 @@
 import css from './Cart.module.css'
 import CartItem from '../CartItem/CartItem'
-import Spinner from '../Spinner/Spinner';
-import  { useState } from "react";
 import { useCartContext } from '../../routing/context/cartContext';
 
 
@@ -14,17 +12,33 @@ const Cart = () => {
         </div>
     ) : (
         <div className={`${css.cartListContainer}`}>
-            <div className={`${css.cartItemList}`}>
-                    {cart.map( cartItems => 
-                        <CartItem 
-                            key={cartItems.item.id}  
-                            item={cartItems.item} 
-                            quantity={cartItems.quantity} 
+            <div className={`${css.growLimit}`}>
+                <div className={`${css.cartItemList}`}>
+                    {cart.map(cartItems =>
+                        <CartItem
+                            key={cartItems.item.id}
+                            item={cartItems.item}
+                            quantity={cartItems.quantity}
                         />
                     )}
+                </div>
+                <div className={`${css.priceboxContainer}`}>
+                    <div className={`${css.titleContainer}`}>
+                        <h3 className={`${css.title}`}>Resumen de compra</h3>
+                    </div>
+                    <div className={`${css.detailsContainer}`}>
+                        <div className={`${css.productsAmountContainer}`}>
+                            <span>Productos ({itemsTotal})</span>
+                            <span>${total}</span>
+                        </div>
+                        <div className={`${css.productsAmountContainer}`}>
+                            <span>Total</span>
+                            <span>${total}</span>
+                        </div>
+                    </div>
+                    <button className={`${css.continuarCompraBTN}`}>Continuar compra</button>
+                </div>
             </div>
-            <div>Cantidad de items: {itemsTotal}</div>
-            <div>Subtotal: {total}</div>
         </div>
     )
 }
