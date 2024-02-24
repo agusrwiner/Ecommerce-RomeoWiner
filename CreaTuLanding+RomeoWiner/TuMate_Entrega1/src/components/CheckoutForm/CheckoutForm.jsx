@@ -12,12 +12,19 @@ const CheckoutForm = () => {
     ) : (
         <div className={`${css.checkOutContainer}`}>
             <div className={`${css.growLimit}`}>
-                <form className={`${css.userInfo}`}  action="">
-                    <input type="text" placeholder='Nombre'/>
-                    <input type="text" placeholder='Apellido' />
-                    <input type="text" placeholder='Mail' />
-                    <input type="text" placeholder='Contraseña' />
-                </form>
+                <div className={`${css.loginBox}`}>
+                    <h2>Login</h2>
+                    <form>
+                        <div className={`${css.userBox}`}>
+                            <input className='userInput' type="text" name="" required/>
+                            <label className='userLabel'>Username</label>
+                        </div>
+                        <div className={`${css.userBox}`}>
+                            <input className='userInput' type="password" name="" required/>
+                            <label className='userLabel'>Password</label>
+                        </div>
+                    </form>
+                </div>
                 <div className={`${css.priceboxContainer}`}>
                     <div className={`${css.titleContainer}`}>
                         <h3 className={`${css.title}`}>Resumen de compra</h3>
