@@ -13,7 +13,6 @@ const Cart = () => {
         </div>
     ) : (
         <div className={`${css.cartListContainer}`}>
-            <button onClick={clearCart}>Vaciar carrito</button>
             <div className={`${css.growLimit}`}>
                 <div className={`${css.cartItemList}`}>
                     {cart.map(cartItems =>
@@ -23,10 +22,13 @@ const Cart = () => {
                             quantity={cartItems.quantity}
                         />
                     )}
+                    <div className={`${css.cartTitleContainer}`}>
+                        <button className={`${css.vaciarCarritoBTN}`} onClick={clearCart}>Vaciar carrito</button>
+                    </div>
                 </div>
                 <div className={`${css.priceboxContainer}`}>
                     <div className={`${css.titleContainer}`}>
-                        <h3 className={`${css.title}`}>Resumen de compra</h3>
+                        <h3 className={`${css.title}`}>Resumen de compra</h3>                        
                     </div>
                     <div className={`${css.detailsContainer}`}>
                         <div className={`${css.productsAmountContainer}`}>
