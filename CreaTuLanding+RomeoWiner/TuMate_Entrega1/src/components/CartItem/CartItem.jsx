@@ -1,4 +1,5 @@
 import css from './CartItem.module.css'
+import CartItemCount from '../CartItemCount/CartItemCount'
 
 const CartItem = ( { item: { id, title, price, category, description, image, stock }, quantity } ) => {
     const totalPrice = price * quantity
@@ -18,7 +19,7 @@ const CartItem = ( { item: { id, title, price, category, description, image, sto
                 </div>
             </header>
             <div className={`${css.cartItemCountContainer}`}>
-                ItemCount
+                <CartItemCount initial={quantity} stock={stock}></CartItemCount>
             </div>
             <div className={`${css.itemActions}`}>
                 Eliminar

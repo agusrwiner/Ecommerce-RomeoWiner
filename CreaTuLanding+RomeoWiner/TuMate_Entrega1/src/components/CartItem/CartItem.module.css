@@ -47,10 +47,15 @@
     line-height: 1.5;
     font-size: 18px;
 }
-
 .cardPrice {
     position: relative;
 
     font-size: 14px;
     color: #212222;
+}
+
+.cartItemCountContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
