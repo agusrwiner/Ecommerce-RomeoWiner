@@ -14,6 +14,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
             setQuantity(quantity - 1);
         }
     }
+    const handleClick = () => {
+        onAdd(quantity);
+    }
 
     return(
         <div className={`${css.counter}`}>
@@ -23,7 +26,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <button className={`${css.button}`} onClick={increment}>+</button>
             </div>
             <div className={`${css.controls} ${css.buttonsControls}`}>
-                <button className={`${css.button}`} onClick={ ()=> onAdd(quantity) } disabled={!stock}>
+                <button className={`${css.button}`} onClick={handleClick} disabled={stock <= 0}>
                     Agregar al carrito
                 </button>
             </div>

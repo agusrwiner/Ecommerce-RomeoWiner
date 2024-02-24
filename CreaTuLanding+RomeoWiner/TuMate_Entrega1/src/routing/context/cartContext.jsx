@@ -79,7 +79,7 @@ const CartProvider = ({children}) => {
 
     const isInCart = id => cart.find( item => item.item.id === id )
 
-    const contextValue = { cart, itemsTotal, total, addItem, clearCart, deleteItem, updateItem }
+    const contextValue = { isInCart, cart, itemsTotal, total, addItem, clearCart, deleteItem, updateItem }
 
     return <Provider value={contextValue}>{children}</Provider>
 }
