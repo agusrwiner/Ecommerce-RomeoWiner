@@ -20,7 +20,9 @@ const Item = ({id, title, price, category, description, image, stock}) => {
                 <img className={`${css.cardImg}`} src={image} alt={title}/>
             </picture>
             <footer className={`${css.cardFooter}`}>
-                <NavLink to={`/product/${id}`} className={`${css.cardSeeDetail}`}>Ver Mas</NavLink>
+                <NavLink to={`/product/${id}`} className={`${css.cardSeeDetail}`}>
+                    <button className={`${css.button}`}>Ver mas</button>
+                </NavLink>
             </footer>
         </article>
     )
