@@ -28,17 +28,17 @@
     justify-content: center;
     align-items: center;
 
-    height: 40%;
+    height: 60%;
     width: 100%;
     border-radius: 8px;
 
 }
 
 .cardImg {
-    width: 23%;
+    /* width: 23%;
     max-width: 190px;
-    min-width: 90px;
-    /* height: 100%; */
+    min-width: 90px; */
+    height: 100%;
     max-height: 275px;
 
 }
