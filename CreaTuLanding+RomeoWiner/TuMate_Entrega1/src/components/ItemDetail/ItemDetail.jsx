@@ -33,7 +33,11 @@ const ItemDetail = ({ id, title, price, category, description, image, stock }) =
                         </NavLink>
                     </div>
                 ) : (
-                    <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+                    stock <= 0 ? (
+                        <h3 className={`${css.sinStock}`}>No hay stock</h3>
+                    ) : (
+                        <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+                    )
                 )}
             </footer>
         </article>

@@ -6,7 +6,7 @@ const Item = ({id, title, price, category, description, image, stock}) => {
         <article className={`${css.card}`}>
             {
                 stock <= 0 ? (
-                    <h3>No hay stock</h3>
+                    <h3 className={`${css.sinStock}`}>No hay stock</h3>
                 ): <></>
                 
             }
