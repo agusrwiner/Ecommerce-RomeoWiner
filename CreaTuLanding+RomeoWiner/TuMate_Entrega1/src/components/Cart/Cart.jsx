@@ -23,6 +23,9 @@ const Cart = () => {
                         />
                     )}
                     <div className={`${css.cartTitleContainer}`}>
+                        <NavLink to="/">
+                            <button className={`${css.continuarCompraBTN}`}>Continuar comprando</button>
+                        </NavLink>
                         <button className={`${css.vaciarCarritoBTN}`} onClick={clearCart}>Vaciar carrito</button>
                     </div>
                 </div>
