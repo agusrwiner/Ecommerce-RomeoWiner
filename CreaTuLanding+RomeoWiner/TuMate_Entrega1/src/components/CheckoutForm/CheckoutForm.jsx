@@ -1,10 +1,13 @@
 import css from './CheckoutForm.module.css'
 import { useCartContext } from '../../routing/context/cartContext';
+import { useAuthContext } from '../../routing/context/authContext';
 import { NavLink } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
+import SignupForm from '../SignupForm/SignupForm';
 
 const CheckoutForm = () => {
     const { cart, total, itemsTotal, clearCart } = useCartContext()
+    const { isUserLoggedIn } = useAuthContext()
 
     return itemsTotal === 0 ? (
         <div className={`${css.checkOutContainer}`}>
@@ -13,7 +16,13 @@ const CheckoutForm = () => {
     ) : (
         <div className={`${css.checkOutContainer}`}>
             <div className={`${css.growLimit}`}>
-                <LoginForm></LoginForm>
+                {
+                    isUserLoggedIn ? (
+                        <SignupForm></SignupForm>
+                    ) : (
+                        <LoginForm></LoginForm>
+                    )
+                }
                 <div className={`${css.priceboxContainer}`}>
                     <div className={`${css.titleContainer}`}>
                         <h3 className={`${css.title}`}>Resumen de compra</h3>
