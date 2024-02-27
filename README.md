@@ -24,8 +24,14 @@ Eccomerce de una tienda de mates que utiliza...
 - [Mockaroo](https://www.mockaroo.com/)
 - Excel
 
+### Firebase estructure
+#### 'products'
+![Products](https://drive.google.com/file/d/1c2_CZy7qMEdXvEiRFsNizbazP_hXvYGG/view?usp=sharing)
 
+#### 'orders'
+![Orders](https://drive.google.com/file/d/1XvdH3iiQJVVPPpSuQxacSYCAdUwI-uU0/view?usp=sharing)
 
 ### Futuras adiciones
 
-...
+- Implementar Login utilizando Firebase Auth
+- Mejorar el diseño de la pagina
