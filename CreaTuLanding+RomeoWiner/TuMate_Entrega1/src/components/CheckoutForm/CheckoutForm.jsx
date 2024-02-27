@@ -16,13 +16,14 @@ const CheckoutForm = () => {
     ) : (
         <div className={`${css.checkOutContainer}`}>
             <div className={`${css.growLimit}`}>
-                {
+                {/* {
                     isUserLoggedIn ? (
                         <SignupForm></SignupForm>
                     ) : (
                         <LoginForm></LoginForm>
                     )
-                }
+                } */}
+                <SignupForm></SignupForm>
                 <div className={`${css.priceboxContainer}`}>
                     <div className={`${css.titleContainer}`}>
                         <h3 className={`${css.title}`}>Resumen de compra</h3>
@@ -37,7 +38,7 @@ const CheckoutForm = () => {
                             <span>${total}</span>
                         </div>
                     </div>
-                    <NavLink to={'/'}><button className={`${css.comprarBTN}`}>Comprar</button></NavLink>
+                    {/* <NavLink to={'/'}><button className={`${css.comprarBTN}`}>Comprar</button></NavLink> */}
                 </div>
             </div>
         </div>
