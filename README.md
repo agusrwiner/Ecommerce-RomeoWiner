@@ -1,6 +1,6 @@
 # Entrega Final - React JS Flex | Coderhouse
 
-Eccomerce de una tienda de mates que utiliza...
+Proyecto final del curso React JS Flex de Coderhouse. Se trata del Frontend de un Ecommerce de una tienda de mates.
 
 - Proyecto final del curso **React JS Flex** de Coderhouse 
 - Comision 57910
@@ -11,9 +11,21 @@ Eccomerce de una tienda de mates que utiliza...
 
 ### Tecnologias & Herramientas utilizadas
 - React JS
+    - Hooks
+    - APIs
+    - Events
+    - Context
+    - NavLinks
+    - Routes
+    - Conditional rendering
+    - Promises
+    - Map
 - [Vite](https://vitejs.dev/guide/)
 - HTML
 - CSS
+    - CSS Modules
+    - Responsive Design
+    - User Experience
 - Javascript
 - [Netlify](https://tu-mate.netlify.app/)
 - [Firebase](https://firebase.google.com/docs/web/setup)

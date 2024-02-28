@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import CartProvider from "./routing/context/cartContext";
 import AuthProvider from "./routing/context/authContext";
 import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/product/:productId' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/checkout' element={<CheckoutForm/>} />
+          <Route path='/checkout/:orderId' element={<div className="not_foundDIV"><Checkout/></div>} />
           <Route path='*' element={<div className="not_foundDIV"><h1 className="notFound">404 NOT FOUND</h1></div>} />
         </Routes>
       </BrowserRouter>

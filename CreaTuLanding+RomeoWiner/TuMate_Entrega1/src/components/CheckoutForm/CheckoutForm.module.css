@@ -20,6 +20,9 @@
     width: 100%;
     max-width: 1128px;
 }
+.emptyCart {
+    color: #f2f2f2;
+}
 
 .priceboxContainer {
     position: sticky;
@@ -67,4 +70,27 @@
 
 .comprarBTN:hover {
     border-color: #646cff;
+}
+
+@media screen and (max-width: 975px) {
+    .checkOutContainer {
+        padding: 15px 0 0 0;
+    }
+    .growLimit {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkOutContainer {
+        width: 100%;
+    }
+
+    .priceboxContainer {
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+
+        width: 100vw;
+        max-width: 100%;
+    }
 }

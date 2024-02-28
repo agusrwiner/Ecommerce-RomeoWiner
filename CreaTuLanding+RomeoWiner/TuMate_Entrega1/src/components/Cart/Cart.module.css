@@ -26,8 +26,9 @@
     gap: 10px;
 
     width: 70%;
-
-    /* background-color: red; */
+}
+.emptyCart{
+    color: #f2f2f2;
 }
 
 .priceboxContainer{
@@ -78,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 10px;
 }
 .cartTitle{
@@ -102,4 +103,31 @@
 }
 .vaciarCarritoBTN:hover {
     border-color: #f2f2f2;
+}
+
+/* Medias linked to CartItem */
+@media screen and (max-width: 975px) {
+    .cartListContainer{
+        padding: 15px 0 0 0;
+    }
+    .growLimit{
+        flex-direction: column;
+    }
+    .cartItemList{
+        width: 100%;
+    }
+    .card{
+        margin: 0 15px;
+    }
+    .cartTitleContainer {
+        padding: 0 15px;
+    }
+    .priceboxContainer{
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+
+        width: 100vw;
+        max-width: 100%;
+    }
 }

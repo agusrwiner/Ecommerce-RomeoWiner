@@ -9,7 +9,7 @@ const Cart = () => {
 
     return itemsTotal === 0 ? (
         <div className={`${css.cartListContainer}`}>
-            <h1>Carrito vacio</h1>
+            <h1 className={`${css.emptyCart}`}>Carrito vacio</h1>
         </div>
     ) : (
         <div className={`${css.cartListContainer}`}>
