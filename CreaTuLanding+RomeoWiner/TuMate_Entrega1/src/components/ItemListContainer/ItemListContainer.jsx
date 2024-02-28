@@ -1,40 +1,48 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
-import { getProductById, getProducts } from "../../util/asyncMock";
 import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
+import { db } from "../../firebase/config";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setloading] = useState(true);
     const { categoryId } = useParams();
-    // console.log(categoryId);
 
     useEffect(() => {
-        getProducts().then( (products) => {
-            if (categoryId) {
-                const filteredProducts = products.filter(
-                    (product) => product.category === categoryId
-                )
-                setProducts(filteredProducts)
-                setloading(false);
-            }else{
+        const productsCollection = collection( db,'products' )
+
+        //if category get filtered products
+        if (categoryId) {
+            const queryCollection = query( 
+                productsCollection, where( 'category','==',categoryId ) 
+            )
+            getDocs(queryCollection).then( ( {docs} ) => {
+                const products = docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }))
+
                 setProducts(products);
                 setloading(false);
-            }
-        })
+            } )
+        } else { //if NO category get all products WITHOUT filter
+            getDocs(productsCollection).then( ( {docs} ) => {
+                const products = docs.map( doc => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }) )
+
+                setProducts(products);
+                setloading(false);
+            })
+        }
     }, [categoryId])
 
-    getProductById(3).then( product => {
-        // console.log( `Single Product:` );
-        // console.log(product);
-    } )
-
     return loading ? (
-        <div className='itemListContainer'>
-            <Spinner/>
-        </div>
+        <Spinner/>
     ) : (
         <div className='itemListContainer'>
             <ItemList products={products} />

@@ -1,0 +1,105 @@
+.cartListContainer{
+    position: relative;
+    top: 80px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100vw;
+    max-width: 100%;
+    padding: 15px;
+}
+.growLimit{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1128px;
+}
+
+.cartItemList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 70%;
+
+    /* background-color: red; */
+}
+
+.priceboxContainer{
+    position: sticky;
+    top: 95px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 27%;
+    min-width: 260px;
+    height: 215px;
+    padding: 20px 24px;
+    border-radius: 5px;
+
+    background-color: #f2f2f2;
+    box-shadow: 0 1px 2px #1a1a1a1f;
+}
+.detailsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.productsAmountContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.continuarCompraBTN{
+    width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.continuarCompraBTN:hover {
+    border-color: #646cff;
+}
+
+.cartTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cartTitle{
+    font-size: 20px;
+    color: #f2f2f2;
+}
+.vaciarCarritoBTN{
+    width: 25%;
+    min-width: fit-content;
+    
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #9C0006;
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.vaciarCarritoBTN:hover {
+    border-color: #f2f2f2;
+}

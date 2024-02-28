@@ -1,0 +1,11 @@
+.container{
+    user-select: none;
+}
+.svg{
+    padding: 0;
+}
+.totalItems{
+    display: inline-block;
+    
+    color: #f2f2f2;
+}

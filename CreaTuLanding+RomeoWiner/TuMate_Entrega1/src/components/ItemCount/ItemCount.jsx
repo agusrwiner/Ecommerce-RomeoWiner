@@ -1,9 +1,8 @@
-import './ItemCount.css'
+import css from './ItemCount.module.css'
 import { useState } from 'react'
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(initial);
-    stock = 10
 
     const increment = ()=> {
         if (quantity < stock) {
@@ -15,16 +14,19 @@ const ItemCount = ({stock, initial, onAdd}) => {
             setQuantity(quantity - 1);
         }
     }
+    const handleClick = () => {
+        onAdd(quantity);
+    }
 
     return(
-        <div className='counter'>
-            <div className='controls'>
-                <button className='button' onClick={decrement}>-</button>
-                <h4 className='number'>{quantity}</h4>
-                <button className='button' onClick={increment}>+</button>
+        <div className={`${css.counter}`}>
+            <div className={`${css.controls}`}>
+                <button className={`${css.button}`} onClick={decrement}>-</button>
+                <h4 className={`${css.number}`}>{quantity}</h4>
+                <button className={`${css.button}`} onClick={increment}>+</button>
             </div>
-            <div className='controls buttonsControls'>
-                <button className='button' onClick={ ()=> onAdd(quantity) } disabled={!stock}>
+            <div className={`${css.controls} ${css.buttonsControls}`}>
+                <button className={`${css.button}`} onClick={handleClick} disabled={stock <= 0}>
                     Agregar al carrito
                 </button>
             </div>
