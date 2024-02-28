@@ -43,7 +43,7 @@ const SignupForm = () => {
             <Spinner />
         </div>
     ) : (
-        <div className={`${css.checlOutFormContainer}`}>
+        <div className={`${css.checkOutFormContainer}`}>
             <h2 className={`${css.formTitle}`}>Complete su email</h2>
             <form className={`${css.form}`}>
                 <div className={`${css.userBox}`}>

@@ -6,7 +6,7 @@
     background-color: #1a1a1a;
 }
 
-.checlOutFormContainer {
+.checkOutFormContainer {
     width: 70%;
     padding: 40px;
 
@@ -79,4 +79,15 @@
 }
 .comprarBTN:hover {
     border-color: #646cff;
+}
+
+@media screen and (max-width: 975px){
+    .checkOutFormContainer{
+        width: 90%;
+        margin: 0 15px;
+        padding: 40px 25px;
+    }
+    .form{
+        gap: 10px;
+    }
 }
