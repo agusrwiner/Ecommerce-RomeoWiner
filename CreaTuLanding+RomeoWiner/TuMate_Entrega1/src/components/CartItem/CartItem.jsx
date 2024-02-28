@@ -23,8 +23,8 @@ const CartItem = ( { item: { id, title, price, category, description, image, sto
                 <div className={`${css.itemCartInfo}`}>
                     <h2 className={`${css.cardH2}`}>{title}</h2>
                     <div className={`${css.itemPriceContainer}`}>
-                        ${totalPrice}<br/>
-                        ({price} por unidad)
+                        <p>${totalPrice}</p>
+                        <p>({price} por unidad)</p>
                     </div>
                 </div>
             </header>
