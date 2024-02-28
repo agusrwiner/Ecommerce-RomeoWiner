@@ -41,7 +41,7 @@ Proyecto final del curso React JS Flex de Coderhouse. Se trata del Frontend de u
 ![prodcuts](https://github.com/agusrwiner/Ecommerce-RomeoWiner/assets/74317181/5695a599-67a5-4856-b2a2-5081d96f9ecb)
 
 #### 'orders'
-![orders](https://github.com/agusrwiner/Ecommerce-RomeoWiner/assets/74317181/a67d9dd3-18ac-4305-900d-805c751ddd09)
+![orders](https://github.com/agusrwiner/Ecommerce-RomeoWiner/assets/74317181/10bc7ca0-5e4f-4840-b42b-730d113d9dd3)
 
 ### Futuras adiciones
 
