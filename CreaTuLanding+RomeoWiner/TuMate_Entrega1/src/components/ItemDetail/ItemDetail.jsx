@@ -1,12 +1,11 @@
 import css from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount';
 import { useCartContext } from '../../routing/context/cartContext';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const ItemDetail = ({ id, title, price, category, description, image, stock }) => {
     const item = { id, title, price, category, description, image, stock }
     const {addItem, isInCart} = useCartContext()
-    const  navigate = useNavigate();
 
     const onAdd = count => {
         addItem(item,count)

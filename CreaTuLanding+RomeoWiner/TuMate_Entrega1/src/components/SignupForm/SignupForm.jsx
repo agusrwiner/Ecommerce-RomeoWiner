@@ -42,10 +42,6 @@ const SignupForm = () => {
                     <input className='userInput' onChange={ (e)=>setEmail(e.target.value) } type="text" name="" required />
                     <label className='userLabel'>Email</label>
                 </div>
-                {/* <div className={`${css.userBox}`}>
-                    <input className='userInput' onChange={(e) => setPassword(e.target.value)} type="password" name="" required/>
-                    <label className='userLabel'>Contraseña</label>
-                </div> */}
                 <button onClick={handleSubmit} className={`${css.button}`}>Comprar</button>
             </form>
         </div>

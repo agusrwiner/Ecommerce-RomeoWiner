@@ -20,6 +20,9 @@
     width: 100%;
     max-width: 1128px;
 }
+.emptyCart {
+    color: #f2f2f2;
+}
 
 .priceboxContainer {
     position: sticky;

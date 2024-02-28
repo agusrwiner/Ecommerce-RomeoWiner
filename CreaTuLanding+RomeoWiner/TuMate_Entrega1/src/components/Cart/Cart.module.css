@@ -29,6 +29,9 @@
 
     /* background-color: red; */
 }
+.emptyCart{
+    color: #f2f2f2;
+}
 
 .priceboxContainer{
     position: sticky;

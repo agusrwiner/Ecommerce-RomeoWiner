@@ -7,8 +7,7 @@ const Item = ({id, title, price, category, description, image, stock}) => {
             {
                 stock <= 0 ? (
                     <h3 className={`${css.sinStock}`}>No hay stock</h3>
-                ): <></>
-                
+                ) : <></>
             }
             <header className={`${css.cardHeader}`}>
                 <div className={`${css.titleHolder}`}>
