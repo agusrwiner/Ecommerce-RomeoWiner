@@ -34,6 +34,14 @@
     max-width: 100%;
     margin: auto;
 
+    
+}
+.navbar::before{
+    content:" ";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+
     background-color: rgba(33, 34, 34, 0.75);
     backdrop-filter: blur(5px);
 }
@@ -149,8 +157,40 @@
     height: 100vh;
 }
 
+/* -----MOBILE TABS----- */
+.mobileTabs {
+    position: fixed;
+    top: 80px;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    min-height: calc(100vh - 80px);
+    width: clamp(180px, 60%, 530px);
+
+    background-color: rgba(33, 34, 34, 0.75);
+    backdrop-filter: blur(5px);
+}
+.mobileTabLI {
+    list-style: none;
+}
+.mobileTabLIA {
+    color: #f2f2f2;
+    user-select: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: color .3s, opacity .3s;
+}
+/* -----END MOBILE TABS----- */
+
 @media screen and (min-width: 700px) {
-    /* *{outline: solid 1px red;} */
     .tabs {
         position: relative;
         inset: 0;
@@ -163,12 +203,14 @@
         transform: scaleX(1);
         /* background-color: rgba(245, 222, 179, 0); */
     }
-
     .tabLI {
         opacity: 1;
     }
-
     .burger {
+        display: none;
+    }
+
+    .mobileTabs{
         display: none;
     }
 }

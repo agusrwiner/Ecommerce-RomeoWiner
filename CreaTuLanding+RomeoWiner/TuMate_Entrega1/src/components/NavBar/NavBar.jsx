@@ -24,6 +24,20 @@ const NavBar = () => {
                         <NavLink to="/products/bombilla" className={`${css.tabLIA}`} href="">Bombillas</NavLink>
                     </li>
                 </ul>
+                <ul className={`${css.mobileTabs}`}>
+                    <li className={`${css.mobileTabLI}`}>
+                        <NavLink to='/home' className={`${css.mobileTabLIA}`} href="">Inicio</NavLink>
+                    </li>
+                    <li className={`${css.mobileTabLI}`}>
+                        <NavLink to='/products/mate' className={`${css.mobileTabLIA}`} href="">Mates</NavLink>
+                    </li>
+                    <li className={`${css.mobileTabLI}`}>
+                        <NavLink to='/products/termo' className={`${css.mobileTabLIA}`} href="">Termos</NavLink>
+                    </li>
+                    <li className={`${css.mobileTabLI}`}>
+                        <NavLink to="/products/bombilla" className={`${css.mobileTabLIA}`} href="">Bombillas</NavLink>
+                    </li>
+                </ul>
                 <div className={`${css.widgetsDIV}`}>
                     <NavLink to={"cart"}> <CartWidget/> </NavLink>
                     <div className={`${css.burger}`}>
