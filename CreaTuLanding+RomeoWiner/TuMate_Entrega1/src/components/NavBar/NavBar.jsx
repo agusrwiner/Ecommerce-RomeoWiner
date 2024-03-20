@@ -10,12 +10,16 @@ const NavBar = () => {
             window.scroll(0, 0)
             toggleNavbar()
         }else{
-            console.log( 'Does not match',e.target );
+            console.log('else',e.target);
             toggleNavbar()
+            if (e.target.matches('#burger') || e.target.matches('#line1') || e.target.matches('#line2') || e.target.matches('#line3') ) {
+                console.log('Does not match', e.target);
+                toggleNavbar()
+            }
         }
     }
 
-    const toggleNavbar = event => {
+    const toggleNavbar = () => {
         const navbar = document.querySelector('#navbar');
         const mobileTabs = document.getElementById( 'mobileTabs' )
         const burger = document.getElementById('burger')
