@@ -4,6 +4,24 @@ import { NavLink } from "react-router-dom";
 import logo from './../../assets/02mateLogo.png'
 
 const NavBar = () => {
+    const toggleNavbar = event => {
+        const mobileTabs = document.getElementById( 'mobileTabs' )
+        const burger = document.getElementById('burger')
+        const line1 = document.querySelector('#line1');
+        const line2 = document.querySelector('#line2');
+        const line3 = document.querySelector('#line3');
+
+        mobileTabs.classList.toggle( 'activeMobile' );
+        if (mobileTabs.ariaHidden == 'true' ) {
+            mobileTabs.ariaHidden = false } else mobileTabs.ariaHidden = true
+        
+        burger.classList.toggle('burgerActive');
+        line1.classList.toggle('activeLine1')
+        line2.classList.toggle('activeLine2')
+        line3.classList.toggle('activeLine3')
+
+    }
+
     return (
         <nav className={`${css.navbar}`}>
             <div className={`${css.growLimit} ${css.growLimitNavbar}`}>
@@ -24,7 +42,7 @@ const NavBar = () => {
                         <NavLink to="/products/bombilla" className={`${css.tabLIA}`} href="">Bombillas</NavLink>
                     </li>
                 </ul>
-                <ul className={`${css.mobileTabs}`}>
+                <ul id="mobileTabs" className={`${css.mobileTabs}`} aria-hidden='true' > 
                     <li className={`${css.mobileTabLI}`}>
                         <NavLink to='/home' className={`${css.mobileTabLIA}`} href="">Inicio</NavLink>
                     </li>
@@ -40,10 +58,10 @@ const NavBar = () => {
                 </ul>
                 <div className={`${css.widgetsDIV}`}>
                     <NavLink to={"cart"}> <CartWidget/> </NavLink>
-                    <div className={`${css.burger}`}>
-                        <div className={`${css.line} ${css.line1}`}></div>
-                        <div className={`${css.line} ${css.line2}`}></div>
-                        <div className={`${css.line} ${css.line3}`}></div>
+                    <div id="burger" className={`${css.burger}`} onClick={toggleNavbar}>
+                        <div id="line1" className={`${css.line}`}></div>
+                        <div id="line2" className={`${css.line}`}></div>
+                        <div id="line3" className={`${css.line}`}></div>
                     </div>
                 </div>
             </div>
