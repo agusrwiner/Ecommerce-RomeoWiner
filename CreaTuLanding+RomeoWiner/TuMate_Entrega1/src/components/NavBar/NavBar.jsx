@@ -4,7 +4,19 @@ import { NavLink } from "react-router-dom";
 import logo from './../../assets/02mateLogo.png'
 
 const NavBar = () => {
+    const handleClick = e => {
+        if (e.target.matches('.activeMobile a')) {
+            console.log('Matches', e.target);
+            window.scroll(0, 0)
+            toggleNavbar()
+        }else{
+            console.log( 'Does not match',e.target );
+            toggleNavbar()
+        }
+    }
+
     const toggleNavbar = event => {
+        const navbar = document.querySelector('#navbar');
         const mobileTabs = document.getElementById( 'mobileTabs' )
         const burger = document.getElementById('burger')
         const line1 = document.querySelector('#line1');
@@ -13,16 +25,21 @@ const NavBar = () => {
 
         mobileTabs.classList.toggle( 'activeMobile' );
         if (mobileTabs.ariaHidden == 'true' ) {
-            mobileTabs.ariaHidden = false } else mobileTabs.ariaHidden = true
+            mobileTabs.ariaHidden = false
+            navbar.addEventListener('click',handleClick)
+        } else if (mobileTabs.ariaHidden == 'false' ) {
+            mobileTabs.ariaHidden = true
+            navbar.removeEventListener('click',handleClick)
+        }
         
         burger.classList.toggle('burgerActive');
-        line1.classList.toggle('activeLine1')
-        line2.classList.toggle('activeLine2')
-        line3.classList.toggle('activeLine3')
+        line1.classList.toggle('activeLine1');
+        line2.classList.toggle('activeLine2');
+        line3.classList.toggle('activeLine3');
     }
 
     return (
-        <nav className={`${css.navbar}`}>
+        <nav id="navbar" className={`${css.navbar}`}>
             <div className={`${css.growLimit} ${css.growLimitNavbar}`}>
                 <div className={`${css.logoDIV}`}>
                     <NavLink to='/home'><img className={`${css.storeLogo}`} src={logo} alt="Logo" /></NavLink>

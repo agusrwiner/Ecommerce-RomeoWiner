@@ -167,7 +167,7 @@
     justify-content: space-around;
 
     min-height: calc(100vh - 100px);
-    width: min(100%, 530px);
+    width: 100%;
 
     background-color: rgba(33, 34, 34, 0.75);
     backdrop-filter: blur(5px);
