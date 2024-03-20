@@ -1,6 +1,6 @@
 .ItemDetailContainer{
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 0;
 
     display: flex;
@@ -9,7 +9,7 @@
 
     width: 100vw;
     max-width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     overflow: auto;
     padding: 15px;
 }
