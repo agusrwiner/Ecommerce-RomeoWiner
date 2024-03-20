@@ -6,14 +6,11 @@ import logo from './../../assets/02mateLogo.png'
 const NavBar = () => {
     const handleClick = e => {
         if (e.target.matches('.activeMobile a')) {
-            console.log('Matches', e.target);
             window.scroll(0, 0)
             toggleNavbar()
         }else{
-            console.log('else',e.target);
             toggleNavbar()
             if (e.target.matches('#burger') || e.target.matches('#line1') || e.target.matches('#line2') || e.target.matches('#line3') ) {
-                console.log('Does not match', e.target);
                 toggleNavbar()
             }
         }
